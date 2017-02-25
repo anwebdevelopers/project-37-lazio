@@ -1,0 +1,217 @@
+.project {
+    padding: rem(90px) 0;
+    background-color: #f5f6fa;
+}
+.project__wrapper {
+    @extend .container;
+}
+.project__box {
+    position: relative;
+    margin: rem(30px) 0 0 0;
+}
+
+
+
+.project__slider.owl-carousel {
+    .owl-nav {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        top: 100px;
+    }
+    .owl-item {
+        .project__description-text {
+            p {
+                transform: scale(0) translateX(200px);
+                transition: all 1.2s ease;
+            }
+        }
+    }
+    .owl-item.active {
+        .project__description-text {
+            p {
+                transform: scale(1) translateX(0);;
+            }
+        }
+    }
+}
+.project__slider-item {
+    padding: 20px;
+}
+.project__description {
+    padding: rem(40px) 5% rem(30px) 5%;
+    background-color: #fff;
+    box-shadow: 0 5px 30px -5px transparentize(#000, .79);
+}
+.project__description-name {
+    font-size: 20px;
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+}
+.project__description-text {
+    position: relative;
+    margin: rem(20px) 0 0 0;
+    padding: 0 0 0 rem(50px);
+    font-family: Palatino Linotype, serif;
+    font-style: italic;
+    line-height: 1.6;
+    font-size: 14px;
+    &:before {
+        content: '“';
+        position: absolute;
+        top: -5px;
+        left: 0;
+        font-size: 62px;
+        line-height: 1;
+        color: $main-color;
+        font-family: Georgia, serif;;
+    }
+    p {
+        margin: 0;
+    }
+}
+.project__description-place {
+    margin: rem(15px) 0 0 0;
+    padding: 0 0 0 rem(50px);
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+    font-size: 14px;
+}
+.project__description-date {
+    margin: rem(10px) 0 0 0;
+    padding: 0 0 0 rem(50px);
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #aaa;
+    font-size: 14px;
+}
+.project__content {
+    margin: rem(40px) 0 0 0;
+    font-size: 0;
+    display: flex;
+}
+.project__content-item {
+    display: inline-block;
+    vertical-align: top;
+    width: 48.5%;
+    &:first-child {
+        margin: 0 3% 0 0;
+    }
+}
+.project__content-img {
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+.project__content-box {
+    position: relative;
+    z-index: 1;
+    width: 86%;
+    padding: rem(40px) 7%;
+    margin: -14% 7% 0 7%;
+    background-color: #fff;
+    box-shadow: 0 5px 30px -5px transparentize(#000, .79);
+}
+.project__content-title {
+    position: relative;
+    padding: 0 0 0 rem(34px);
+    font-size: 16px;
+    line-height: 1;
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    &:before {
+        content: '\e807';
+        position: absolute;
+        left: 0;
+        top: -2px;
+        color: #efefef;
+        transform: rotate(-90deg);
+        font-family: "fontello";
+        font-style: normal;
+        font-weight: normal;
+        speak: none;
+        text-decoration: inherit;
+        text-align: center;
+        font-variant: normal;
+        text-transform: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+.project__content-title_orange-mark {
+    &:before {
+        color: #f5dbbb;
+    }
+}
+.project__content-text {
+    margin: rem(10px) 0 0 0;
+    padding: 0 0 0 rem(34px);
+    font-size: 14px;
+    line-height: 1.5;
+    p {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width : 1230px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .project__slider.owl-carousel {
+        .owl-nav {
+            position: static;
+            top: auto;
+            text-align: center;
+            .owl-prev,
+            .owl-next {
+                position: static;
+                display: inline-block;
+                vertical-align: top;
+                margin: 0 20px;
+            }
+        }
+    }
+    .project__content {
+        display: block;
+    }
+    .project__content-item {
+        display: block;
+        width: auto;
+        &:first-child {
+            margin: 0 0 20px 0;
+        }
+    }
+    .project__description-text {
+        padding: 0 0 0 rem(5px);
+        p {
+            text-indent: 32px;
+        }
+    }
+    .project__description-place,
+    .project__description-date {
+        padding: 0 0 0 rem(5px);
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .project__wrapper {
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width : 320px) {
+
+}

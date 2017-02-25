@@ -1,0 +1,79 @@
+.certificate {
+    padding: rem(90px) 0 rem(60px) 0;
+}
+.certificate__wrapper {
+    @extend .container;
+}
+.certificate__box {
+    margin: rem(50px) 0 0 0;
+    font-size: 0;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.certificate__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 13.66%;
+    margin: 0 1.5%;
+    box-shadow: 0 5px 30px -5px transparentize(#000, .79);
+    transition: all .5s ease;
+    img {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+    &:hover {
+        box-shadow: 0 5px 40px 0 transparentize(#000, .79);
+    }
+}
+
+@media only screen and (max-width : 1230px) {
+    .certificate__item {
+        width: 17%;
+        margin: 0 1.5%;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+    .certificate__item {
+        width: 22%;
+        margin: 0 1.5%;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    .certificate__item {
+        width: 22.3%;
+        margin: 0 4.5% 20px 4.5%;
+    }
+}
+
+@media only screen and (max-width : 640px) {
+    .certificate__item {
+        width: 27.3%;
+        margin: 0 2% 20px 2%;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .certificate__item {
+        width: 40%;
+        margin: 0 5% 20px 0;
+        &:nth-child(odd) {
+            margin: 0 10% 20px 5%;
+        }
+    }
+}
+
+@media only screen and (max-width : 320px) {
+    .certificate__item {
+        width: 45%;
+        margin: 0 0 20px 0;
+        &:nth-child(odd) {
+            margin: 0 10% 20px 0;
+        }
+    }
+}

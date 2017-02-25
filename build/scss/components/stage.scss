@@ -1,0 +1,99 @@
+.stage {
+    padding: rem(70px) 0 rem(50px) 0;
+}
+.stage__wrapper {
+    @extend .container;
+}
+.stage__undertitle {
+    margin: rem(15px) 0 0 0;
+    font-size: 13px;
+    text-align: center;
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+}
+.stage__box {
+    margin: rem(50px) 0 0 0;
+    font-size: 0;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.stage__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 22%;
+    padding: rem(30px) 3%;
+    margin: 0 1.5%;
+    transition: all .8s ease;
+    &:hover {
+        box-shadow: 0 5px 30px -5px transparentize(#000, .79);
+    }
+}
+.stage__item-icon {
+    height: 66px;
+    line-height: 66px;
+    img {
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+.stage__item-title {
+    margin: rem(20px) 0 0 0;
+    h3 {
+        margin: 0;
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+}
+.stage__item-text {
+    margin: rem(15px) 0 0 0;
+    font-size: 13px;
+    p {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width : 1230px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+    .stage__item {
+        width: 24%;
+        margin: 0 .5%;
+        padding: rem(30px) 1.5%;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    .stage__item {
+        width: 30.33%;
+        margin: 0 1.5% rem(20px) 1.5%;
+        padding: rem(30px) 3%;
+    }
+}
+
+@media only screen and (max-width : 640px) {
+    .stage__item {
+        width: 45%;
+        margin: 0 2.5% rem(20px) 2.5%;
+    }
+}
+@media only screen and (max-width : 480px) {
+    .stage__item {
+        width: 49%;
+        margin: 0 0 rem(20px) 0;
+        padding: rem(30px) 2%;
+        &:nth-child(odd) {
+            margin: 0 2% rem(20px) 0;
+        }
+    }
+}
+
+@media only screen and (max-width : 320px) {
+
+}

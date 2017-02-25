@@ -1,0 +1,127 @@
+@import "bourbon";
+@import "components/vars.scss";
+@import "components/normalize.scss";
+@import "components/fonts.scss";
+
+*::-webkit-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+*:-ms-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	color: #666;
+}
+body input:required:valid,
+body textarea:required:valid {
+	color: #666;
+}
+*,
+*:before,
+*:after{
+	box-sizing: border-box;
+}
+html {
+	font-size: rem(16px);
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.4;
+	font-family: 'Proxima Nova Rg', sans-serif;
+	color: #343434;
+	background-color: #fff;
+	overflow-x: hidden;
+}
+.container {
+	max-width: 1230px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.hidden {
+	display: none;
+}
+a {
+	outline: none !important;
+}
+.title {
+	text-align: center;
+	h1, h2 {
+		margin: 0;
+		font-size: rem(27px);
+		line-height: 1.2;
+		text-transform: uppercase;
+		font-weight: 400;
+		letter-spacing: 3px;
+		color: #000;
+	}
+	&_lowercase {
+		h1, h2 {
+			text-transform: lowercase;
+			letter-spacing: 0;
+			&:first-letter {
+				text-transform: uppercase;
+			}
+		}
+
+	}
+}
+
+//Custom Styles Here
+@import "components/header.scss";
+@import "components/pictures.scss";
+@import "components/advantages.scss";
+@import "build/scss/components/magnific-popup.scss";
+@import "components/section.scss";
+@import "components/about.scss";
+@import "components/philosophy.scss";
+@import "components/project.scss";
+@import "components/certificate.scss";
+@import "components/footer.scss";
+@import "components/callback.scss";
+//page stiles interior-doors
+@import "components/headsect.scss";
+@import "components/catalog.scss";
+@import "components/equipment.scss";
+@import "components/stage.scss";
+@import "components/example.scss";
+@import "components/order.scss";
+@import "components/reviews.scss";
+@import "components/sentence.scss";
+//page stiles entrance-doors
+@import "components/entrance-list.scss";
+@import "components/entrance-item.scss";
+//page contacts
+@import "components/contacts.scss";
+//page sections
+@import "components/sections.scss";
+
+
+//ALWAYS END
+@import "components/media.scss";
+
+//Load Libs SASS
+//@import "html/libs/animate/animate.sass";
+@import "html/libs/owl.carousel/dist/assets/owl.carousel.min";
+@import "html/libs/fontello/css/fontello";
+@import "html/libs/magnific-popup/dist/magnific-popup";

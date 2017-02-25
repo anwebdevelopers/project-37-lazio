@@ -1,0 +1,12 @@
+@import "bourbon";
+
+$main-color: #b09ed1;
+
+
+@mixin btn {
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    text-decoration: none;
+}

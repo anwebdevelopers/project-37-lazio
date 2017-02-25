@@ -1,0 +1,213 @@
+.reviews {
+    padding: rem(70px) 0;
+}
+.reviews__wrapper {
+    @extend .container;
+}
+.reviews__box {
+    margin: rem(30px) 0 0 0;
+}
+.reviews__slider.owl-carousel {
+
+    .owl-nav {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        top: 50%;
+
+        .owl-prev {
+            left: -15px;
+            transform: translateY(-50%);
+            &:before {
+                content: '\e801';
+            }
+        }
+        .owl-next {
+            right: -15px;
+            transform: translateY(-50%);
+        }
+    }
+}
+.reviews__item {
+    box-shadow: 0 5px 30px -5px transparentize(#000, .79);
+    margin: 20px;
+    padding: rem(30px) 4% rem(40px) 4%;
+    background-color: #fff;
+}
+.reviews__title {
+    font-size: 20px;
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+    line-height: 1.2;
+}
+.reviews__item-box {
+    @extend .clearfix;
+    margin: rem(30px) 0 0 0;
+}
+.reviews__photo {
+    @extend .clearfix;
+    float: left;
+    width: 30%;
+}
+.reviews__photo-item {
+    float: left;
+    width: 45%;
+    &:last-child() {
+        margin: 0 0 0 10%;
+    }
+}
+.reviews__content {
+    margin: 0 0 0 35%;
+}
+
+.reviews__content-text {
+    position: relative;
+    margin: rem(20px) 0 0 0;
+    padding: 0 0 0 rem(40px);
+    font-family: Palatino Linotype, serif;
+    font-style: italic;
+    line-height: 1.6;
+    font-size: 14px;
+    &:before {
+        content: '“';
+        position: absolute;
+        top: -5px;
+        left: 0;
+        font-size: 62px;
+        line-height: 1;
+        color: $main-color;
+        font-family: Georgia, serif;;
+    }
+    p {
+        margin: 0;
+    }
+}
+.reviews__content-place {
+    margin: rem(15px) 0 0 0;
+    padding: 0 0 0 rem(40px);
+    font-size: 14px;
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+}
+.reviews__content-date {
+    margin: rem(10px) 0 0 0;
+    padding: 0 0 0 rem(40px);
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #aaa;
+}
+.reviews__photo-text {
+    position: relative;
+    margin: rem(10px) 0 0 0;
+    padding: 0 0 0 rem(30px);
+    font-size: 16px;
+    line-height: 1;
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    &:before {
+        content: '\e807';
+        position: absolute;
+        left: 0;
+        top: -2px;
+        color: #efefef;
+        transform: rotate(-90deg);
+        font-family: "fontello";
+        font-style: normal;
+        font-weight: normal;
+        speak: none;
+        text-decoration: inherit;
+        text-align: center;
+        font-variant: normal;
+        text-transform: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+.reviews__photo-text_orange-mark {
+    &:before {
+        color: #f5dbbb;
+    }
+}
+
+@media only screen and (max-width : 1230px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+    .reviews__content {
+        margin: 0 0 0 28%;
+    }
+    .reviews__photo {
+        width: 23%;
+    }
+    .reviews__photo-item {
+        float: none;
+        width: auto;
+        &:last-child() {
+            margin: 20px 0 0 0;
+        }
+    }
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .reviews__slider.owl-carousel {
+        .owl-nav {
+            position: static;
+            top: auto;
+            text-align: center;
+            .owl-prev,
+            .owl-next {
+                position: static;
+                display: inline-block;
+                vertical-align: top;
+                margin: 0 20px;
+                transform: translate(0);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .reviews__wrapper {
+        padding: 0;
+    }
+    .reviews__item {
+        padding: rem(30px) 5% rem(40px) 5%;
+    }
+    .reviews__photo{
+        float: none;
+        width: auto;
+    }
+    .reviews__photo-item {
+        float: left;
+        width: 45%;
+        &:last-child() {
+            margin: 0 0 0 10%;
+        }
+    }
+    .reviews__content {
+        margin: 30px 0 0 0;
+    }
+    .reviews__content-text {
+        padding: 0 0 0 rem(5px);
+        p {
+            text-indent: 32px;
+        }
+    }
+    .reviews__content-place,
+    .reviews__content-date {
+        padding: 0 0 0 rem(5px);
+    }
+}
+
+@media only screen and (max-width : 320px) {
+
+}

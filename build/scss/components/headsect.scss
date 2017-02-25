@@ -1,0 +1,192 @@
+.headsect {
+    position: relative;
+    z-index: 2;
+}
+.headsect__wrapper {
+    @extend .container;
+    position: relative;
+    z-index: 1;
+}
+.headsect__category {
+    background-color: #444651;
+}
+.headsect__category-list {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: justify;
+        text-align-last: justify;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        li {
+            display: inline-block;
+            vertical-align: top;
+            text-align: left;
+            text-align-last: left;
+            a {
+                position: relative;
+                display: block;
+                padding: rem(20px) rem(15px) rem(20px) rem(25px);
+                text-decoration: none;
+                color: #fff;
+                font-size: rem(13px);
+                text-transform: uppercase;
+                transition: all .5s ease;
+                letter-spacing: 1px;
+                &:before {
+                    content: '/';
+                    position: absolute;
+                    top: 50%;
+                    left: rem(10px);
+                    transform: translateY(-50%);
+                    font-size: 16px;
+                    color: $main-color;
+                    transition: all .5s ease;
+                }
+                &:hover, &:active, &:focus, {
+                    background-color: $main-color;
+                    &:before {
+                        color: #fff;
+                    }
+                }
+                &.active {
+                    background-color: $main-color;
+                    &:before {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.headsect__centre {
+    position: relative;
+    padding: rem(60px) 0 rem(60px) 0;
+    background-color: #383840;
+}
+.headsect__box {
+    width: 28.33%;
+    padding: 0 5% 0 0;
+}
+.headsect__nav {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 0;
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            display: inline-block;
+            vertical-align: top;
+            width: 50%;
+            font-size: 13px;
+            a {
+                display: block;
+                padding: rem(10px);
+                font-size: rem(13px);
+                border: 2px solid transparent;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: #fff;
+                transition: all .5s ease;
+                &:hover, &:active, &:focus, &.active {
+                    border-color: $main-color;
+                    color: $main-color;
+                }
+            }
+        }
+    }
+}
+.headsect__image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 50%;
+    margin-left: -250px;
+    overflow: hidden;
+}
+.headsect__image-inner {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-size: cover;
+    background-position: center 0;
+    animation-name: scale;
+    animation-duration: 26s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.25,0,.75,1);
+}
+@keyframes scale {
+    0% {
+        transform: scale(1)  translateZ(0);
+    }
+    50% {
+        transform: scale(1.15) translate(10px, -10px) translateZ(0);
+    }
+    100% {
+        transform: scale(1)  translateZ(0);
+    }
+}
+
+@media only screen and (max-width : 1230px) {
+    .headsect__box {
+        padding: 0 1% 0 0;
+    }
+    .headsect__image {
+        margin-left: -200px;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+
+    .headsect__image {
+        margin-left: -150px;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    .headsect__centre {
+        padding: rem(60px) 0 rem(360px) 0;
+        background-color: #383840;
+    }
+    .headsect__box {
+        width: auto;
+    }
+    .headsect__nav {
+        ul {
+            text-align: justify;
+            text-align-last: justify;
+            justify-content: space-between;
+            font-size: inherit;
+            li {
+                width: auto;
+            }
+        }
+    }
+    .headsect__image {
+        top: auto;
+        left: 0;
+        width: auto;
+        height: rem(300px)
+    }
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+@media only screen and (max-width : 480px) {
+
+}
+@media only screen and (max-width : 320px) {
+
+}

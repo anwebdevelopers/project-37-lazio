@@ -1,0 +1,108 @@
+.sentence {
+    padding: rem(80px) 0;
+}
+.sentence__wrapper {
+    @extend .container;
+}
+.sentence__title {
+    h1, h2 {
+        margin: 0;
+        font-size: 20px;
+        font-family: 'Proxima Nova Lt';
+        font-weight: 600;
+        color: #000;
+    }
+}
+.sentence__box {
+    @extend .clearfix;
+    margin: rem(40px) 0 0 0;
+    display: flex;
+}
+.sentence__img {
+    float: left;
+    width: 29%;
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+.sentence__text {
+    float: right;
+    width: 63%;
+    margin: 0 0 0 7%;
+    font-size: 13px;
+    >:first-child() {
+        margin: 0;
+    }
+    p {
+        margin: rem(15px) 0 0 0;
+    }
+    ul {
+        margin: rem(15px) 0 0 0;
+        padding: 0 0 0 rem(15px);
+        list-style: none;
+        li {
+            margin: rem(15px) 0 0 0;
+        }
+    }
+}
+
+.stock {
+
+}
+.stock__wrapper {
+    @extend .container;
+}
+.stock__img {
+    img {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+}
+@media only screen and (max-width : 1230px) {
+    .sentence__img {
+        width: 36%;
+    }
+    .sentence__text {
+        width: 60%;
+        margin: 0 0 0 3%;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+    .sentence__box {
+        display: block;
+    }
+    .sentence__img {
+        width: 47%;
+        margin: 0 3% 3% 0;
+    }
+    .sentence__text {
+        float: none;
+        width: auto;
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+    .sentence__img {
+        float: none;
+        width: auto;
+        margin: 0;
+        text-align: center;
+    }
+    .sentence__text {
+        margin: rem(30px) 0 0 0;
+    }
+}
+
+@media only screen and (max-width : 320px) {
+
+}

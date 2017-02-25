@@ -1,0 +1,186 @@
+.contacts {
+    padding: rem(60px) 0 rem(80px) 0;
+    background-color: #f5f6fa;
+}
+.contacts__wrapper {
+    @extend .container;
+}
+.contacts__box {
+    margin: rem(40px) 0 0 0;
+    @extend .clearfix;
+    display: flex;
+}
+.contacts__information {
+    float: left;
+    background-color: #fff;
+    box-shadow: 0 5px 30px -5px transparentize(#000, .79);
+    transition: all .8s ease;
+    &:hover {
+        box-shadow: 0 5px 40px 0 transparentize(#000, .79);
+        .contacts__slider-item {
+            img {
+                filter: saturate(1.5) brightness(1.05);
+            }
+        }
+    }
+}
+.contacts__information_50percent {
+    width: 50%;
+}
+.contacts__information_75percent {
+    width: 75%;
+}
+.contacts__slider {
+    .owl-nav {
+        top: 50%;
+        opacity: 0;
+        transition: opacity .8s ease;
+        .owl-prev, .owl-next {
+            transform: translateY(-50%);
+        }
+    }
+    &:hover {
+        .owl-nav {
+            opacity: 1;
+
+        }
+    }
+}
+.contacts__slider-item {
+    overflow: hidden;
+    img {
+        transition: all .8s ease;
+    }
+}
+.contacts__content {
+    padding: rem(25px);
+}
+.contacts__adress {
+    a {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 0 0 rem(30px);
+        text-decoration: none;
+        font-size: rem(13px);
+        text-transform: uppercase;
+        font-family: 'Proxima Nova Lt';
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: #212121;
+        transition: all .5s ease;
+        &:hover, &:active, &:focus {
+            color: darken($main-color, 20%);
+        }
+    }
+    i {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        font-size: rem(26px);
+    }
+}
+.contacts__links {
+    margin: rem(20px) 0 0 0;
+    a {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        margin:  0 rem(20px) rem(10px) 0;
+        padding: 0 0 0 rem(30px);
+        text-decoration: none;
+        font-size: rem(16px);
+        color: #212121;
+        transition: all .5s ease;
+        &:hover, &:active, &:focus {
+            color: darken($main-color, 20%);
+        }
+    }
+    i {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        font-size: rem(23px);
+    }
+}
+.contacts__mode {
+    margin: rem(10px) 0 0 0;
+    font-size: rem(14px);
+    color: #4b4b4b;
+}
+.contacts__manager {
+    float: right;
+    width: 23%;
+    margin: 0 0 0 2%;
+    background-color: #fff;
+    box-shadow: 0 5px 30px -5px transparentize(#000, .79);
+    box-shadow: 0 5px 30px -5px transparentize(#000, .79);
+    transition: all .8s ease;
+    &:hover {
+        box-shadow: 0 5px 40px 0 transparentize(#000, .79);
+        .contacts__manager-img {
+            img {
+                filter: saturate(1.5) brightness(1.05);
+            }
+        }
+    }
+}
+.contacts__manager-img {
+    overflow: hidden;
+    img {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        transition: all .8s ease;
+    }
+}
+.contacts__manager-name {
+    padding: rem(50px) rem(20px);
+    text-align: center;
+    font-size: rem(16px);
+    letter-spacing: 1px;
+    color: #212121;
+}
+.map {
+    height: 400px;
+}
+
+@media only screen and (max-width : 1230px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+    .contacts__box {
+        display: block;
+    }
+    .contacts__information {
+        float: none;
+    }
+    .contacts__information_50percent,
+    .contacts__information_75percent {
+        width: auto;
+    }
+    .contacts__manager {
+        float: left;
+        width: 48%;
+        margin: rem(20px) 0 0 0;
+        &:nth-child(even) {
+            margin: rem(20px) 4% 0 0 ;
+        }
+    }
+}
+
+@media only screen and (max-width : 320px) {
+
+}

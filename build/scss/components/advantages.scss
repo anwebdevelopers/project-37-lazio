@@ -1,0 +1,218 @@
+.advantages {
+    padding: rem(90px) 0;
+    background-color: #f5f6fa;
+}
+.advantages__wrapper {
+    @extend .container;
+}
+.advantages__undertitle {
+    position: relative;
+    margin: rem(20px) 0 0 0;
+    padding: rem(20px) 0 0 0;
+    font-size: 14px;
+    text-align: center;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: rem(90px);
+        height: 2px;
+        background-color: #f5dbbb;
+    }
+}
+.advantages__box {
+    margin: rem(50px) 0 0 0;
+    font-size: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.advantages__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 31.5%;
+    background-color: #fff;
+    box-shadow: 0 5px 30px -5px transparentize(#000, .79);
+    transition: all .8s ease;
+    &:not(:nth-child(3n+3)) {
+        margin: 0 2.75% 0 0;
+    }
+    &:hover {
+        box-shadow: 0 5px 40px 0 transparentize(#000, .79);
+        .advantages__preview-img {
+            img {
+                transform: scale(1.1);
+                filter: saturate(2) brightness(1.05);
+            }
+        }
+    }
+}
+.advantages__preview {
+    display: block;
+    padding: 0 0 rem(40px) 0;
+    text-decoration: none;
+    color: #000;
+}
+.advantages__preview-img {
+    overflow: hidden;
+    img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        transition: all .8s ease;
+    }
+}
+.advantages__preview-title {
+    margin: rem(40px) 0 0 0;
+    padding: 0 9%;
+    h3 {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+}
+.advantages__preview-text {
+    margin: rem(15px) 0 0 0;
+    font-size: 14px;
+    padding: 0 9%;
+    p {
+        margin: 0;
+    }
+}
+.advantages__popup {
+    @extend .clearfix;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f5f6fa;
+}
+.advantages__popup-img {
+    float: left;
+    width: 48%;
+    img {
+        display: block;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+.advantages__popup-box {
+    padding: rem(50px) 0 rem(20px) 0;
+    float: right;
+    width: 52%;
+}
+.advantages__popup-title {
+    padding: 0 6.36%;
+    h3 {
+        margin: 0;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+}
+.advantages__popup-list {
+    margin: rem(15px) 0 0 0;
+}
+.advantages__popup-list-item {
+    @extend .clearfix;
+    padding: rem(18px) 6.36%;
+    transition: all .5s ease;
+    &:hover {
+        transform: translateX(-20px);
+        background-color: #fff;
+        box-shadow: 0 0 30px 0 transparentize(#000, .79);
+    }
+}
+.advantages__popup-list-img {
+    float: left;
+    width: rem(50px);
+    img {
+        display: block;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+.advantages__popup-list-title {
+    margin: 0 0 0 rem(70px);
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+    font-size: 14px;
+}
+.advantages__popup-list-text {
+    margin: 5px 0 0 rem(70px);
+    font-size: 14px;
+    p {
+        margin: 0;
+    }
+}
+.mfp-container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+@media only screen and (max-width : 1230px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+    .advantages__box {
+        text-align: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .advantages__item {
+        width: 48.5%;
+        margin: 0 0 20px 0;
+        text-align: left;
+        &:not(:nth-child(3n+3)) {
+            margin: 0 0 20px 0;
+        }
+        &:nth-child(even) {
+            margin: 0 0 20px 3%;
+        }
+    }
+}
+@media only screen and (max-width : 640px) {
+    .advantages__popup-img {
+        float: none;
+        width: auto;
+        img {
+            width: 100%;
+        }
+    }
+    .advantages__popup-box {
+        float: none;
+        width: auto;
+    }
+
+}
+@media only screen and (max-width : 480px) {
+    .advantages__box {
+        display: block;
+    }
+    .advantages__item {
+        display: block;
+        width: auto;
+        margin: 0 0 20px 0;
+        text-align: left;
+        &:not(:nth-child(3n+3)) {
+            margin: 0 0 20px 0;
+        }
+        &:nth-child(even) {
+            margin: 0 0 20px 0;
+        }
+    }
+}
+
+@media only screen and (max-width : 320px) {
+
+}

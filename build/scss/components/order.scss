@@ -1,0 +1,226 @@
+.order {
+    padding: rem(70px) 0 rem(60px) 0;
+    background-color: #f6f6f7;
+}
+.order__wrapper {
+    @extend .container;
+}
+.order__box {
+    @extend .clearfix;
+    display: flex;
+}
+.order__left-col {
+    float: left;
+    width: 47.5%;
+    margin: 0 5% 0 0;
+}
+.order__right-col {
+    float: right;
+    width: 47.5%;
+}
+.order__title {
+    font-family: 'Proxima Nova Lt';
+    color: #6c6c6c;
+    h2 {
+        margin: 0;
+        line-height: 1.2;
+        font-size: 28px;
+        font-weight: 300;
+    }
+}
+.order__text {
+    margin: rem(35px) 0 0 0;
+    color: #6c6c6c;
+    font-size: 14px;
+    p {
+        margin: rem(10px) 0 0 0;
+    }
+}
+
+.order__notice {
+    @extend .clearfix;
+    margin: rem(35px) 0 0 0;
+}
+.order__notice-icon {
+    float: left;
+    width: rem(60px)
+}
+.order__notice-text {
+    padding: rem(15px) 0 0 0;
+    margin: 0 0 0 rem(85px);
+    font-size: 14px;
+    font-weight: 600;
+    color: #6c6c6c;
+    p {
+        margin: 0;
+    }
+}
+
+.order__form {
+
+}
+
+.order__form-item {
+    display: block;
+    input, textarea {
+        display: block;
+        width: 100%;
+        padding: 15px 20px;
+        border: 1px solid #dedede;
+        font-size: 14px;
+        outline: none;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: #fff;
+        color: #9fa3a7;
+        transition: all .5s ease;
+        &::-webkit-input-placeholder {
+        	color: #9fa3a7;
+        	opacity: 1;
+        }
+        &:-moz-placeholder {
+        	color: #9fa3a7;
+        	opacity: 1;
+        }
+        &::-moz-placeholder {
+        	color: #9fa3a7;
+        	opacity: 1;
+        }
+        &:-ms-input-placeholder {
+        	color: #9fa3a7;
+        	opacity: 1;
+        }
+        &:focus::-webkit-input-placeholder {
+        	opacity: 0;
+        }
+        &:focus:-moz-placeholder {
+        	opacity: 0;
+        }
+        &:focus::-moz-placeholder {
+        	opacity: 0;
+        }
+        &:focus:-ms-input-placeholder {
+        	opacity: 0;
+        }
+        &:hover, &:focus {
+            border-color: $main-color;
+        }
+    }
+}
+.order__form-name,
+.order__form-email {
+    position: relative;
+    input {
+        padding-left: rem(48px);
+    }
+    &:before {
+        position: absolute;
+        top: 50%;
+        left: rem(20px);
+        transform: translateY(-50%);
+        font-size: rem(18px);
+        color: #9fa3a7;
+        font-family: "fontello";
+        font-style: normal;
+        font-weight: normal;
+        speak: none;
+        display: inline-block;
+        text-decoration: inherit;
+        text-align: center;
+        font-variant: normal;
+        text-transform: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+.order__form-name {
+    float: left;
+    width: 40%;
+    margin: 0 2% 0 0;
+    &:before {
+        content: '\e80a';
+    }
+}
+.order__form-email {
+    margin: 0 0 0 42%;
+    &:before {
+        content: '\f0e0';
+    }
+}
+.order__form-textarea {
+    margin: rem(15px) 0 0 0;
+    textarea {
+        min-height: 140px;
+        resize: vertical;
+    }
+}
+.order__form-submit {
+    margin: rem(30px) 0 0 0;
+    button {
+        @include btn;
+        display: inline-block;
+        vertical-align: top;
+        padding: rem(13px) rem(45px);
+        font-size: 12px;
+        border: 1px solid $main-color;
+        color: #fff;
+        font-family: 'Proxima Nova Th';
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        background-color: $main-color;
+        border-radius: 40px;
+        transition: all .5s ease;
+        &:hover, &:active, &:focus {
+            color: #000;
+            background-color: transparent;
+            border-color: #000;
+        }
+    }
+}
+
+@media only screen and (max-width : 1230px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+    .order__form-name {
+        float: none;
+        width: auto;
+        margin: 0;
+    }
+    .order__form-email {
+        margin: rem(15px) 0 0 0;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .order__box {
+        display: block;
+    }
+    .order__left-col {
+        float: none;
+        width: auto;
+        margin: 0;
+    }
+    .order__right-col {
+        float: none;
+        width: auto;
+        margin: rem(40px) 0 0 0;
+    }
+    .order__form-submit {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 320px) {
+
+}

@@ -1,0 +1,98 @@
+.equipment {
+    padding: rem(70px) 0 rem(50px) 0;
+}
+.equipment__wrapper {
+    @extend .container;
+}
+.equipment__undertitle {
+    margin: rem(15px) 0 0 0;
+    font-size: 13px;
+    text-align: center;
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+}
+.equipment__box {
+    margin: rem(50px) 0 0 0;
+    font-size: 0;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.equipment__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 19.4%;
+    margin: 0 2.8%;
+    text-align: left;
+    &:hover {
+        .equipment__item-img {
+            img {
+                transform: scale(1.1);
+                filter: saturate(2) brightness(1.05);
+            }
+        }
+    }
+}
+.equipment__item-img {
+    overflow: hidden;
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        transition: all .8s ease;
+    }
+}
+.equipment__item-title {
+    margin: rem(20px) 0 0 0;
+    h3 {
+        margin: 0;
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+}
+.equipment__item-text {
+    margin: rem(15px) 0 0 0;
+    font-size: 13px;
+    p {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width : 1230px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+    .equipment__item {
+        width: 22%;
+        margin: 0 1.5%;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    .equipment__item {
+        width: 30.33%;
+        margin: 0 1.5% rem(40px) 1.5%;
+    }
+}
+
+@media only screen and (max-width : 640px) {
+    .equipment__item {
+        width: 38%;
+        margin: 0 6% rem(40px) 6%;
+    }
+}
+@media only screen and (max-width : 480px) {
+    .equipment__item {
+        width: 47.5%;
+        margin: 0 0 rem(40px) 0;
+        &:nth-child(odd) {
+            margin: 0 5% rem(40px) 0;
+        }
+    }
+}
+
+@media only screen and (max-width : 320px) {
+
+}
